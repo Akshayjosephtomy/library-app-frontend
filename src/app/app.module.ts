@@ -6,7 +6,16 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AddbookComponent } from './addbook/addbook.component';
 import { ViewallbooksComponent } from './viewallbooks/viewallbooks.component';
+import { RouterModule, Routes } from '@angular/router';
 
+const link:Routes=[
+  {
+    path:"",component:AddbookComponent
+  },
+  {
+    path:"view",component:ViewallbooksComponent
+  }
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +25,8 @@ import { ViewallbooksComponent } from './viewallbooks/viewallbooks.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(link)
   ],
   providers: [],
   bootstrap: [AppComponent]
