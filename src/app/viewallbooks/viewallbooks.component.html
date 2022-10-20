@@ -11,6 +11,7 @@
                     <th scope="col">Author</th>
                     <th scope="col">published Date</th>
                     <th scope="col">Price</th>
+                    <th scope="col">Action</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -20,6 +21,7 @@
                     <td>{{i.author}}</td>
                     <td>{{i.pdate}}</td>
                     <td>₹{{i.price}}</td>
+                    <td><button class="btn btn-danger" (click)="deleteBook(i.id)">Delete</button></td>
                 </tr>
                 </tbody>
             </table>
